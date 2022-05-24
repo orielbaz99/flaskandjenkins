@@ -8,7 +8,7 @@ pipeline{
         }
         stage('build'){
             steps{
-                sh'echo building'
+                sh'python3 flask3.py &'
             }
         }
         stage('test'){

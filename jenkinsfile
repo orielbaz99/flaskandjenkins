@@ -1,0 +1,21 @@
+pipeline{
+    agent any
+    stages{
+        stage('clone'){
+            steps{
+                git branch: 'main', url: 'https://github.com/orielbaz99/flaskandjenkins.git'
+            }
+        }
+        stage('build'){
+            steps{
+                sh'echo building'
+            }
+        }
+        stage('test'){
+            steps{
+                sh'echo testing'
+            }
+        }
+    }
+    
+}
